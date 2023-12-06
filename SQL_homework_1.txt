@@ -1,0 +1,43 @@
+1. Display the name and cost of goods from 20 to 150 EUR
+SELECT
+	ProductName,
+	Price
+FROM Products
+WHERE
+	Price >= 20
+    AND
+	Price <= 150
+ 
+2. Display supplier countries, except those from the USA.
+SELECT
+	Country
+FROM Suppliers
+WHERE
+	Country != 'USA'
+ 
+3. Display shipper with ID 1
+SELECT
+	ShipperName
+FROM Shippers
+WHERE
+	ShipperID = '1'
+ 
+4. Display contact names of clients, except those from France and USA.
+SELECT
+	ContactName
+FROM Customers
+WHERE
+	Country != 'France'
+    AND
+	Country != 'USA'
+ 
+5. Display the country, city and address of all suppliers, except those from Japan and Brazil
+SELECT
+	Country,
+	City,
+	Address
+FROM Suppliers
+WHERE
+	Country != 'Brazil'
+    AND
+	Country != 'Japan'
