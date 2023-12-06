@@ -1,0 +1,57 @@
+1. Display the name and cost of goods from 20 to 150 EUR
+SELECT
+	ProductName,
+	Price
+FROM Products
+WHERE
+	Price >= 20
+    AND
+	Price <= 150
+ 
+2. Display supplier countries, except those from the USA.
+SELECT
+	Country
+FROM Suppliers
+WHERE
+	Country != 'USA'
+ 
+3. Display shipper with ID 1
+SELECT
+	ShipperName
+FROM Shippers
+WHERE
+	ShipperID = '1'
+ 
+4. Display contact names of clients, except those from France and USA.
+SELECT
+	ContactName
+FROM Customers
+WHERE
+	Country != 'France'
+    AND
+	Country != 'USA'
+ 
+5. Display the country, city and address of all suppliers, except those from Japan and Brazil
+SELECT
+	Country,
+	City,
+	Address
+FROM Suppliers
+WHERE
+	Country != 'Brazil'
+    AND
+	Country != 'Japan'
+
+---------------------
+Provide ten typical business processes for the subject area VIDEO HOSTING (Youtube), as well as their compliance with CRUD.
+
+1.User registration on video hosting - CREATE.
+2.Create your own channel on video hosting - CREATE.
+3.Creating lists for viewing (sorting) - CREATE.
+4. Subscription to other channels - UPDATE
+5.View video - READ
+6.Adding comments, reviews, etc. - UPDATE.
+7.View recommendations for videos and channels - READ.
+8.View description of information about the channel, about the creator of the channel - READ.
+9.Deleting a video from your channel - DELETE.
+10.Deleting an account from video hosting - DELETE.
