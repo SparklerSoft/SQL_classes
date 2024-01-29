@@ -21,12 +21,13 @@ HAVING
 --Task3. Display the TOP 10 best-selling products (projection: product_name, number of_units_sold)
 SELECT
 	ProductName,
-    COUNT(*) AS Sells
+	SUM(Quantity) AS Number_of_units_sold
 FROM OrderDetails
 JOIN Products ON OrderDetails.ProductID = Products.ProductID
-GROUP BY ProductName
-ORDER BY Sells DESC
+GROUP BY Products.ProductID
+ORDER BY Number_of_units_sold DESC
 LIMIT 10
+
 
 --Task4. Calculate the salary of managers (rate - 5% of the amount of orders sold)
 SELECT
