@@ -1,0 +1,35 @@
+//Task1. Show users from France
+
+db.users.find({
+  country: 'France'
+})
+
+//Task2. Add multiple audio tracks
+
+db.tracks.insertMany([
+  {band: 'Amon Amarth', song: 'Put Your Back Into The Oar', country: 'USA'},
+  {band: 'Sabaton', song: 'Bismark', country: 'Sweden'},
+  {band: 'Linkin Park', song: 'New Divide', country: 'USA'},
+  {band: 'Metallica', song: 'One', country: 'USA'},
+  {band: 'Rammstein', song: 'Tier', country: 'Germany'},
+  {band: 'Dimmu Borgir', song: 'Morning Palace', country: 'Norway'}
+
+])
+
+//Task3. List ten typical business processes for an online store and their compliance with MongoDB methods
+//1. User registration. insertOne([])
+//2. Account edit. updateOne([])
+//3. Product search. find(filter, projection)
+//4. Add product to the cart. insertOne([])
+//5. Pay for product. updateOne([])
+//6. Check product details. findOne()
+//7. Delete all products from cart. deleteMany()
+//8. Delete one product from cart. deleteOne()
+//9. Upload products as a seller from CV-file. insertMany([])
+//10. Edit products as a seller at the personal account. updateMany([])
+
+//Task4. Briefly list the obvious design errors in this database schema
+// https://dbdiagram.io/d/appwitherrors-65b740f2ac844320aee99837
+//Users -> age - int. It has to be a birthdate.
+//It would be better to add a Playlists and connect Track with them.
+//Users -> password - varchar. I think it has to be at the secure part and in hashType view
