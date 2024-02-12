@@ -7,13 +7,36 @@ db.users.find({
 //Task2. Add multiple audio tracks
 
 db.tracks.insertMany([
-  {band: 'Amon Amarth', song: 'Put Your Back Into The Oar', country: 'USA'},
-  {band: 'Sabaton', song: 'Bismark', country: 'Sweden'},
-  {band: 'Linkin Park', song: 'New Divide', country: 'USA'},
-  {band: 'Metallica', song: 'One', country: 'USA'},
-  {band: 'Rammstein', song: 'Tier', country: 'Germany'},
-  {band: 'Dimmu Borgir', song: 'Morning Palace', country: 'Norway'}
-
+  {
+    band: 'Amon Amarth',
+    song: 'Put Your Back Into The Oar',
+    country: 'USA'
+  },
+  {
+    band: 'Sabaton',
+    song: 'Bismark',
+    country: 'Sweden'
+  },
+  {
+    band: 'Linkin Park',
+    song: 'New Divide',
+    country: 'USA'
+  },
+  {
+    band: 'Metallica',
+    song: 'One',
+    country: 'USA'
+  },
+  {
+    band: 'Rammstein',
+    song: 'Tier',
+    country: 'Germany'
+  },
+  {
+    band: 'Dimmu Borgir',
+    song: 'Morning Palace',
+    country: 'Norway'
+  }
 ])
 
 //Task3. List ten typical business processes for an online store and their compliance with MongoDB methods

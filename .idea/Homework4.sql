@@ -1,4 +1,4 @@
-//Task1. Output the average/cost of goods from categories 1, 2, 5, whose names begin with the letter t
+--Task1. Output the average/cost of goods from categories 1, 2, 5, whose names begin with the letter t
 
 SELECT
 	AVG(Price) AS avg_price,
@@ -10,9 +10,9 @@ WHERE
     AND
     ProductName LIKE 'T%'
 
-//Task2. Calculate order cost 10248
+--Task2. Calculate order cost 10248
 SELECT
-	SUM(Price) AS total_cost,
+	SUM(Price) AS total_cost,-- I have to add price * quantity
     OrderDetails.OrderID
 FROM OrderDetails
 JOIN
@@ -20,14 +20,14 @@ Products ON OrderDetails.ProductID = Products.ProductID
 WHERE
 	OrderDetails.OrderID IN (10248)
 
-//Task3. Display the number of products with a price from 10 to 250 EUR
+--Task3. Display the number of products with a price from 10 to 250 EUR
 SELECT
 	COUNT(*) AS total_products
 FROM Products
 WHERE
 	Price BETWEEN 10 AND 250
 
-//Task4. Display the amount for which goods were sent to customers in Germany
+--Task4. Display the amount for which goods were sent to customers in Germany
 SELECT
     SUM(OrderDetails.Quantity * Products.Price) AS TotalAmount
 FROM
@@ -41,4 +41,4 @@ JOIN
 WHERE
     Customers.Country = 'Germany';
 
-//Task5. https://dbdiagram.io/d/Chess-Game-65ae921aac844320ae7596df
+--Task5. https://dbdiagram.io/d/Chess-Game-65ae921aac844320ae7596df
