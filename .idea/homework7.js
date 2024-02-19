@@ -21,7 +21,7 @@ db.users.updateMany(
     { $set: { is_blocked: false } }
 )
 
-//Task4. Increase the balance of unblocked users not from Germany by 150 EUR
+//Task4. Increase the balance of unblocked users not from Georgia by 150 EUR
 db.users.updateMany(
     { country: { $ne: 'Georgia' }, is_blocked: false },
     { $inc: { balance: 150 } }
